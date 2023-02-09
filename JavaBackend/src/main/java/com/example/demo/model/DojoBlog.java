@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.UUID;
 
 public class DojoBlog {
@@ -13,7 +15,7 @@ public class DojoBlog {
 
     private final String body;
 
-    public DojoBlog(UUID id, String title, String author, String body) {
+    public DojoBlog(@JsonProperty("ID") UUID id, @JsonProperty("title") String title,@JsonProperty("author") String author,@JsonProperty("body") String body) {
         this.id = id;
         this.title = title;
         this.author = author;
