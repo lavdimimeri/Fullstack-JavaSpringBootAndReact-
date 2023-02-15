@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("api/v1/dojoBlog")
 @RestController
 public class DojoBlogController {
@@ -20,7 +20,7 @@ public class DojoBlogController {
     public void addDojoBlog(@RequestBody DojoBlog dojoBlog){
         dojoBlogService.addDojoBlog(dojoBlog);
     }
-
+    @CrossOrigin(origins = "*")
     @GetMapping
     public List<DojoBlog> getAllDojoBlogs(){
         return dojoBlogService.getAllDojoBlogs();
