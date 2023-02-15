@@ -12,7 +12,7 @@ public class FakeDojoBlogDataAccessService implements DojoBlogDao{
 
     private static List<DojoBlog> DB  = new ArrayList<>();
     @Override
-    public int insertDojoBlog(UUID id, DojoBlog dojoBlog) {
+    public int insertDojoBlog(int id, DojoBlog dojoBlog) {
         DB.add(new DojoBlog(id, dojoBlog.getTitle(),dojoBlog.getAuthor(),dojoBlog.getBody()));
         return 1;
     }
@@ -27,14 +27,14 @@ public class FakeDojoBlogDataAccessService implements DojoBlogDao{
     }
 
     @Override
-    public Optional<DojoBlog> selectDojoBlogById(UUID id) {
+    public Optional<DojoBlog> selectDojoBlogById(int id) {
         return DB.stream()
-                .filter(dojoBlog -> dojoBlog.getId().equals(id))
+                .filter(dojoBlog -> dojoBlog.getId() == id)
                 .findFirst();
     }
 
     @Override
-    public int deleteDojoBlogById(UUID id) {
+    public int deleteDojoBlogById(int id) {
         Optional<DojoBlog> dojoBlogMaybe=selectDojoBlogById(id);
         if (dojoBlogMaybe.isEmpty()){
             return 0;
@@ -45,7 +45,7 @@ public class FakeDojoBlogDataAccessService implements DojoBlogDao{
     }
 
     @Override
-    public int updateDojoBlogById(UUID id, DojoBlog update) {
+    public int updateDojoBlogById(int id, DojoBlog update) {
        return selectDojoBlogById(id)
                .map(dojoBlog -> {
                    int indexOfDojoBlogToUpdate = DB.indexOf(dojoBlog);

@@ -28,15 +28,15 @@ public class DojoBlogService {
         return dojoBlogDao.selectAllDojoBlogs();
     }
 
-    public Optional<DojoBlog> getDojoBlogById(UUID id){
+    public Optional<DojoBlog> getDojoBlogById(int id){
         return dojoBlogDao.selectDojoBlogById(id);
     }
 
-    public int deleteDojoBlog(UUID id){
+    public int deleteDojoBlog(int id){
         return dojoBlogDao.deleteDojoBlogById(id);
     }
 
-    public int updateDojoBlog(UUID id, DojoBlog dojoBlog){
+    public int updateDojoBlog(int id, DojoBlog dojoBlog){
         return dojoBlogDao.updateDojoBlogById(id, dojoBlog);
     }
 

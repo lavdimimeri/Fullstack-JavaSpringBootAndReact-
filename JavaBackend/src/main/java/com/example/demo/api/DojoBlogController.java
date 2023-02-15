@@ -25,19 +25,19 @@ public class DojoBlogController {
     public List<DojoBlog> getAllDojoBlogs(){
         return dojoBlogService.getAllDojoBlogs();
     }
-
+    @CrossOrigin(origins = "*")
     @GetMapping(path="{id}")
-    public DojoBlog getDojoBlogById(@PathVariable("id") UUID id){
+    public DojoBlog getDojoBlogById(@PathVariable("id") int id){
         return dojoBlogService.getDojoBlogById(id).orElse(null);
     }
 
     @DeleteMapping(path="{id}")
-    public void deleteDojoBlogById(@PathVariable("id") UUID id){
+    public void deleteDojoBlogById(@PathVariable("id") int id){
         dojoBlogService.deleteDojoBlog(id);
     }
 
     @PutMapping(path="{id}")
-    public void updateDojoBlog(@PathVariable("id") UUID id, @RequestBody DojoBlog dojoBlogToUpdate){
+    public void updateDojoBlog(@PathVariable("id") int id, @RequestBody DojoBlog dojoBlogToUpdate){
         dojoBlogService.updateDojoBlog(id, dojoBlogToUpdate);
     }
 

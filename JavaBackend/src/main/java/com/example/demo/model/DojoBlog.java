@@ -7,7 +7,7 @@ import java.util.UUID;
 public class DojoBlog {
 
 
-    private final UUID id;
+    private final int id;
 
     private final String title;
 
@@ -15,14 +15,14 @@ public class DojoBlog {
 
     private final String body;
 
-    public DojoBlog(@JsonProperty("ID") UUID id, @JsonProperty("title") String title,@JsonProperty("author") String author,@JsonProperty("body") String body) {
+    public DojoBlog(@JsonProperty("ID") int id, @JsonProperty("title") String title,@JsonProperty("author") String author,@JsonProperty("body") String body) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.body = body;
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 

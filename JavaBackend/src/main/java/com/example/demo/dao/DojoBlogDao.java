@@ -4,22 +4,26 @@ import com.example.demo.model.DojoBlog;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 import java.util.UUID;
 
 public interface DojoBlogDao {
-    int insertDojoBlog(UUID id, DojoBlog dojoBlog );
+    int insertDojoBlog(int id, DojoBlog dojoBlog );
 
     default int insertDojoBlog(DojoBlog dojoBlog){
-        UUID id = UUID.randomUUID();
+        Random random = new Random();
+        int upperbound = 25;
+
+        int id = random.nextInt(upperbound);
         return insertDojoBlog(id, dojoBlog);
     }
 
     List<DojoBlog> selectAllDojoBlogs();
 
-    Optional<DojoBlog> selectDojoBlogById(UUID id);
+    Optional<DojoBlog> selectDojoBlogById(int id);
 
-    int deleteDojoBlogById(UUID id);
+    int deleteDojoBlogById(int id);
 
-    int updateDojoBlogById(UUID id, DojoBlog dojoBlog);
+    int updateDojoBlogById(int id, DojoBlog dojoBlog);
 
 }

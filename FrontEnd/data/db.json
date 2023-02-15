@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "title": "My second blog",
+      "body": "Why do we use it bla bla bla",
+      "author": "lavdim",
+      "id": 2
+    },
+    {
+      "title": "mmmmm",
+      "body": "kkk",
+      "author": "mario",
+      "id": 4
+    },
+    {
+      "title": "öavdom",
+      "body": "bbbb",
+      "author": "mario",
+      "id": 5
+    }
+  ]
+}
