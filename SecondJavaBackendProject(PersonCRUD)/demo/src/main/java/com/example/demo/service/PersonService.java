@@ -29,4 +29,8 @@ public class PersonService {
     public Optional<Person> getPersonById(UUID id){
     return personDao.selectPersonById(id);
     }
+
+    public void deletePersonById(UUID id){
+     personDao.deletePersonById(id);
+    }
 }
