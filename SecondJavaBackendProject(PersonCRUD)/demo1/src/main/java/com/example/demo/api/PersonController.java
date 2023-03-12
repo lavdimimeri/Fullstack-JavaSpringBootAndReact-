@@ -45,4 +45,10 @@ public class PersonController {
         return personService.getAllPeople();
     }
 
+    @GetMapping(path="/all/{id}")
+    public Person getPersonById(@PathVariable("id") int id){
+       return personService.getPersonById(id);
+    }
+
+
 }

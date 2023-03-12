@@ -28,4 +28,12 @@ public class PersonService {
         personDataAccessService.save(person);
     }
 
+    public void deletePersonById(int id){
+        personDataAccessService.deleteById(id);
+    }
+
+    public void updatePersonById(Person person, int id){
+
+    }
+
 }
