@@ -34,7 +34,7 @@ public class PersonController {
 
     @PostMapping(path="/add")
     public void addPerson(@RequestBody Person person){
-    personService.saveOrUpdate(person);
+    personService.savePerson(person);
     }
 
 
@@ -53,6 +53,11 @@ public class PersonController {
     @DeleteMapping(path="/all/{id}")
     public void deletePersonById(@PathVariable("id") int id){
         personService.deletePersonById(id);
+    }
+
+    @PutMapping(path="/all/{id}")
+    public void updatePerson(@RequestBody Person person){
+        personService.updatePerson(person);
     }
 
 

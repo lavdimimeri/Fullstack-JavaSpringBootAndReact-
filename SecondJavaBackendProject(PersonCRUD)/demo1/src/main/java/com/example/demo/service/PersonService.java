@@ -24,7 +24,7 @@ public class PersonService {
         return persons;
     }
 
-    public void saveOrUpdate(Person person){
+    public void savePerson(Person person){
         personDataAccessService.save(person);
     }
 
@@ -32,7 +32,9 @@ public class PersonService {
         personDataAccessService.deleteById(id);
     }
 
-    public void updatePersonById(Person person, int id){
+    public void updatePerson(Person update){
+
+        personDataAccessService.save(update);
 
     }
 
