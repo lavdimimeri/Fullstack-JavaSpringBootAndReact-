@@ -50,5 +50,10 @@ public class PersonController {
        return personService.getPersonById(id);
     }
 
+    @DeleteMapping(path="/all/{id}")
+    public void deletePersonById(@PathVariable("id") int id){
+        personService.deletePersonById(id);
+    }
+
 
 }
