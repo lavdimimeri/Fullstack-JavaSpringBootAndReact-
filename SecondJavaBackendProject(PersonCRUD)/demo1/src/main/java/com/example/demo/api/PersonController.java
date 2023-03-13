@@ -57,6 +57,7 @@ public class PersonController {
 
     @PutMapping(path="/all/{id}")
     public void updatePerson(@RequestBody Person person){
+
         personService.updatePerson(person);
     }
 
