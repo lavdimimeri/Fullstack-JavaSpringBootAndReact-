@@ -1,6 +1,5 @@
 package com.example.snickare.models;
 import java.time.LocalDateTime;
-import java.util.List;
 
 import jakarta.persistence.*;
 
@@ -42,7 +41,7 @@ public class Purchase {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "service_id", nullable = false)
-    private Service service;
+    private MyService service;
 
     @Column(nullable = false)
     private int squareMeters;

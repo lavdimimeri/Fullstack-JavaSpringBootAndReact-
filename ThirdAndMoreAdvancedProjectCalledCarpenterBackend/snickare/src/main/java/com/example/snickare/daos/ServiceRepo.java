@@ -1,7 +1,8 @@
 package com.example.snickare.daos;
 
-import com.example.snickare.models.Service;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.snickare.models.MyService;
+import org.springframework.data.repository.CrudRepository;
 
-public interface ServiceRepo extends JpaRepository<Service, Integer> {
+public interface ServiceRepo extends CrudRepository<MyService, Integer> {
+
 }
