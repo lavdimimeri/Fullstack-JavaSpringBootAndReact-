@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController // This means that this class is a Controller
-@RequestMapping(path="/demo")
+@RequestMapping(path="/services")
 public class ServiceController {
 @Autowired
    private ServiceRepo serviceRepo;
