@@ -15,6 +15,7 @@ public class PurchaseController {
 
     @PostMapping(path="/add")
     public void addPurchase(@RequestBody Purchase purchase){
+        System.out.println("This is the post method in purchase controller: " + purchase.getId());
         purchaseService.savePurchase(purchase);
     }
 

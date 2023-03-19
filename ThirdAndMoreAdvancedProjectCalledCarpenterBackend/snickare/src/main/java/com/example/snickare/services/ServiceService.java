@@ -23,6 +23,7 @@ return myServices;
 
 
    public void saveService(MyService myService){
+       System.out.println("This is the save method in purchase service: " + myService);
     serviceRepo.save(myService);
    }
 
