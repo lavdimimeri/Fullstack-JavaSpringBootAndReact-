@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Navbar/>
      <h1>This is app Component</h1>
-    <Home/>
+     <Home />
      
     </div>
   );

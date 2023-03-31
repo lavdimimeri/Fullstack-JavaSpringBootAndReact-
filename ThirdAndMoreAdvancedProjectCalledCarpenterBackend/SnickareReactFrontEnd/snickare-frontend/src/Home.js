@@ -1,11 +1,17 @@
+import UserList from "./UserList";
+import useFetch from "./useFetch";
 
 const Home = () => {
+           
+    const {error, isPending, data:users} = useFetch('http://localhost:8080/users/all');
     return ( 
-        <h1>This is Home Component</h1>
+        <div className="home">
+        { error && <div>{ error }</div> }
+        { isPending && <div>Loading...</div> }
+        { users && <UserList users={users} /> }
+      </div>
 
      );
 }
  
-export default Home
-
-;
+export default Home;

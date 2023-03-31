@@ -4,7 +4,7 @@ import com.example.snickare.models.User;
 import com.example.snickare.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController // This means that this class is a Controller
 @RequestMapping(path="/users")
 public class UserController {
@@ -16,7 +16,7 @@ public class UserController {
     public void addUser(@RequestBody User user){
         userService.saveUser(user);
     }
-
+    @CrossOrigin(origins = "*")
     @GetMapping(path="/all")
     public @ResponseBody Iterable<User> getAllUsers() {
         // This returns a JSON or XML with the users
