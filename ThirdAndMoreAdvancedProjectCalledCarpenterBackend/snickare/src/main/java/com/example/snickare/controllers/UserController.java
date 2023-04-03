@@ -34,7 +34,7 @@ public class UserController {
 
         userService.updateUser(user);
     }
-
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(path="/all/{id}")
     public User getUserById(@PathVariable("id") int id){
         return userService.getUserById(id);

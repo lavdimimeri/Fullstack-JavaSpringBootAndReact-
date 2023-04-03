@@ -45,3 +45,12 @@
 .user-preview a{
   text-decoration: none;
 }
+
+.user-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.user-details div {
+  margin: 20px 0;
+}
