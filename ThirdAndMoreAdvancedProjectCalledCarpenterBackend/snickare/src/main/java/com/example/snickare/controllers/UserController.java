@@ -11,7 +11,7 @@ public class UserController {
 
 @Autowired
  UserService userService;
-
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(path="/add")
     public void addUser(@RequestBody User user){
         userService.saveUser(user);
