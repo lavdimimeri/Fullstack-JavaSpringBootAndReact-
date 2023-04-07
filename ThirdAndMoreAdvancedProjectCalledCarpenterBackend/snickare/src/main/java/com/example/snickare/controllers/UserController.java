@@ -23,12 +23,12 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping(path="/all/{id}")
     public void deleteUserById(@PathVariable("id") int id){
         userService.deleteUserById(id);
     }
-
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PutMapping(path="/all/{id}")
     public void updateUser(@RequestBody User user){
 
