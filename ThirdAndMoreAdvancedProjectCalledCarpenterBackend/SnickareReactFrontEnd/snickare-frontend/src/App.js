@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import UserDetails from './UserDetails';
 import Create from './Create';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Update from './update';
 
 function App() {
   return(
@@ -21,6 +22,9 @@ function App() {
             </Route>
              <Route path="/users/all/:id">
               <UserDetails />
+            </Route>
+            <Route path="/update">
+              <Update />
             </Route>
           </Switch>
         </div>

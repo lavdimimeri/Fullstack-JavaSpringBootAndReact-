@@ -1,5 +1,7 @@
 import { useParams, useHistory } from "react-router-dom";
 import useFetch from "./useFetch";
+//import { Link } from "react-router-dom";
+import Update from "./update";
 
 
 const UserDetails = () => {
@@ -7,7 +9,7 @@ const UserDetails = () => {
     const { data: user, error, isPending } = useFetch('http://localhost:8080/users/all/' + id);
     const history = useHistory(); 
 
-
+ 
 
     const handleClick = () => {
       fetch('http://localhost:8080/users/all/' + user.id, {
@@ -30,9 +32,9 @@ const UserDetails = () => {
         </article>
       )}
         
-
-
+      {user && <Update user={user}/>}
       </div>
+     
 
       
      );
