@@ -1,6 +1,6 @@
 import { useParams, useHistory } from "react-router-dom";
 import useFetch from "./useFetch";
-//import { Link } from "react-router-dom";
+
 import Update from "./update";
 
 
@@ -31,7 +31,7 @@ const UserDetails = () => {
           <button onClick={handleClick}>delete</button>
         </article>
       )}
-        
+
       {user && <Update user={user}/>}
       </div>
      

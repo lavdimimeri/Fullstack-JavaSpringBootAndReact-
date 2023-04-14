@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import UserDetails from './UserDetails';
 import Create from './Create';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Update from './update';
+import NotFound from './NotFound';
 
 function App() {
   return(
@@ -23,8 +23,8 @@ function App() {
              <Route path="/users/all/:id">
               <UserDetails />
             </Route>
-            <Route path="/update">
-              <Update />
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </div>

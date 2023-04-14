@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 
 const Update = ({user}) => {
        const id = user.id;
-       
        const[fullName, setfullName] = useState(user.fullName);
        const [address, setAddress] = useState(user.address);
        const [phoneNumber, setphoneNumber] = useState(user.phoneNumber);
